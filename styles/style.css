@@ -1,6 +1,8 @@
 :root{
     --contrast-color: #0084ff;
     --background-color: #000;
+    --complementary-color: #002aff;
+    --title-font: "Josefin Sans";
 }
 
 *{
@@ -35,11 +37,12 @@ body{
 }
 
 .nav--a{
-    color: var(--contrast-color);
+    color: var(--complementary-color);
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: var(--title-font);
 }
 
 .nav--a span{
@@ -56,6 +59,12 @@ body{
 .nav--svg{
     height: 30px;
     fill: var(--contrast-color);
+    transition: all 0.3s ease;
+}
+
+.nav--a:hover svg{
+    fill: var(--contrast-color);
+    filter: drop-shadow(0 0 2px var(--complementary-color));
 }
 
 .svg--personal-logo{
