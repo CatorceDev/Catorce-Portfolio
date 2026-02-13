@@ -10,6 +10,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -84,7 +85,9 @@ body{
     height: 100dvh;
     display: flex;
     justify-content: right;
+    position: relative;
 }
+
 
 .header--img{
     width: 70%;
@@ -106,6 +109,7 @@ body{
     background: linear-gradient(to left, transparent, var(--background-color));
 }
 
+
 .header--content{
     pointer-events: none;
     display: inline-block;
@@ -117,6 +121,8 @@ body{
     color: var(--contrast-color);
     font-family: var(--title-font);
 }
+
+
 
 .header--content h1{
     font-size: clamp(3rem, 10vw, 10rem);
@@ -171,16 +177,22 @@ body{
 #about-me{
     width: 100%;
     position: relative;
-    background-color: var(--complementary-color);
+    background: linear-gradient(to top, var(--contrast-about-me-color), var(--complementary-color) 70%);
+    height: 300dvh;
+    padding-top: 50%;
 }
+
 
 .about-me--container{
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 120px;
     gap: 60px;
+    pointer-events: none;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .about-me--img{
@@ -190,6 +202,22 @@ body{
     position: relative;
     background-color: var(--contrast-about-me-color);
     border-radius: 10px;
+    opacity: 0;
+    animation: appearImg auto both;
+    animation-timeline: view();
+    animation-range: 200px 800px;
+
+}
+
+@keyframes appearImg {
+    from{
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .about-me--img img{
@@ -198,31 +226,123 @@ body{
     border-radius: 10px;
 }
 
+
 .about-me--text{
+    max-width: 700px;
     display: flex;
     gap: 30px;
     flex-direction: column;
-    flex: 1 1 400px;
+    flex: 1 1 300px;
     color: #fff;
     padding:10px;
     font-family: var(--title-font);
-    text-transform: uppercase;
 }
+
 
 .about-me--text h2{
     width: 100%;
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(2.5rem, 5vw, 5rem);
     text-align: left;
 }
-.about-me--text p{
-    background-color: var(--contrast-about-me-color);
-    padding: 30px;
-    font-size: clamp(1rem, 2.5vw, 3rem);
-    text-transform: initial;
-    
+
+.span--1{
+    opacity: 0;
+    animation: appearSpan auto both;
+    animation-timeline: view();
+    animation-range: 0 500px;
+    display: inline-block;
 }
 
-@media (orientation: portrait){
+.span--2{
+    opacity: 0;
+    animation: appearSpan auto both;
+    animation-timeline: view();
+    animation-range: 50px 500px;
+    display: inline-block;
+}
+
+.span--3{
+    opacity: 0;
+    animation: appearSpan auto both;
+    animation-timeline: view();
+    animation-range: 100px 500px;
+    display: inline-block;
+}
+
+.span--4{
+    opacity: 0;
+    animation: appearSpan auto both;
+    animation-timeline: view();
+    animation-range: 150px 500px;
+    display: inline-block;
+}
+
+.span--5{
+    opacity: 0;
+    animation: appearSpan auto both;
+    animation-timeline: view();
+    animation-range: 200px 500px;
+    display: inline-block;
+}
+
+.span--6{
+    opacity: 0;
+    animation: appearSpan auto both 3s;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+    display: inline-block;
+}
+
+.span--7{
+    opacity: 0;
+    animation: appearSpan auto both 3s;
+    animation-timeline: view();
+    animation-range: 300px 500px;
+    display: inline-block;
+}
+
+.span--blank{
+    display: inline-block;
+    width: 30px;
+}
+
+@keyframes appearSpan {
+    0%{
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-50%);
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.about-me--text p{
+    padding: 0 30px;
+    padding-bottom: 10px;
+    font-size: clamp(1rem, 2vw, 2rem);
+    text-transform: initial;
+    opacity: 0;
+    animation: appearP auto both;
+    animation-timeline: view();
+    animation-range: 400px 700px;
+}
+
+@keyframes appearP {
+    from{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 700px) and (orientation: portrait){
     .about-me--text h2{
         transform: translateY(-20px);
         border-radius: 10px;
@@ -230,7 +350,7 @@ body{
     }
 
     .about-me--container{
-        margin-top: 30px;
+        margin-top: 10dvh;
     }
 
     .about-me--text{
@@ -240,11 +360,12 @@ body{
     }
 
     .about-me--img{
-        width: 70%;
+        width: 65%;
+        height: max-content;
     }
 
-    .about-me--text p{
-        
+    .about-me--img img{
+        width: 100%;
     }
 }
 
