@@ -1,5 +1,6 @@
 :root{
     --contrast-color: #fcf;
+    --contrast-color-black: #fcf8;
     --background-color: #000;
     --complementary-color: #001;
     --contrast-about-me-color: #324;
@@ -377,3 +378,54 @@ body{
 }
 
 /*TODO About Me End Styles*/
+
+/*TODO Skills Styles*/
+
+#skills{
+    background-color: var(--contrast-about-me-color);
+    padding: 20px;
+}
+
+.skills--h2{
+    text-align: center;
+    font-family: var(--title-font);
+    color: #fff;
+    font-size: 5rem;
+}
+
+
+.skills--elements{
+    position: relative;
+    padding: 60px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.skills--ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.skills--li{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex: 1 1 50px;
+    position: relative;
+    height: 100%;
+}
+
+.skills--li img{
+    height: 150px;
+    padding: 20px;
+    background-color: var(--contrast-color-black);
+    border-radius: 30px;
+    transition: background 0.4s ease, scale 0.4s ease;
+}
+
+
+.skills--li img:hover{
+    background: var(--contrast-color);
+    scale: 0.9;
+}
