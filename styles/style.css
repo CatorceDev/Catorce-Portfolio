@@ -103,4 +103,64 @@ body{
     height: 100%;
     background: linear-gradient(to left, transparent, var(--background-color));
 }
+
+.header--content{
+    pointer-events: none;
+    display: inline-block;
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(-50%);
+    left: -40%;
+    z-index: 100;
+    color: var(--contrast-color);
+    font-family: var(--title-font);
+}
+
+.header--content h1{
+    font-size: clamp(3rem, 10vw, 10rem);
+    position: relative;
+}
+
+.header--content h1::before{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    width: 0%;
+    height: 100%;
+    background-color: var(--contrast-color);
+    animation: appear 5s alternate infinite 3s;
+}
+
+.header--content h2{
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.header--content p{
+    letter-spacing: 5px;
+}
+
+@keyframes appear {
+    0%{
+        left: 0;
+        width: 0%;
+    }
+    10%{
+        width: 100%;
+    }
+    30%{
+        width: 100%;
+    }
+    40%{
+        right: 0;
+        width: 0;
+    }
+}
+
+@media (orientation: portrait){
+    .header--content{
+        top: 50%;
+        transform: translateY(0);
+    }
+}
 /*TODO Header styles*/
+
