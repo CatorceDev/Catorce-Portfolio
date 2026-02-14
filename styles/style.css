@@ -204,6 +204,7 @@ body {
   animation: appearImg auto both;
   animation-timeline: view();
   animation-range: 200px 800px;
+  box-shadow: 0 0 10px #000;
 }
 
 @keyframes appearImg {
@@ -408,18 +409,38 @@ body {
     display: inline-block;
   }
   .about-me--text p {
-  opacity: 1;
-  animation: none;
-}
+    opacity: 1;
+    animation: none;
+  }
 }
 
 /*TODO About Me End Styles*/
 
 /*TODO Skills Styles*/
 
-#skills {
+#skills{
+    position: absolute;
+    top: -200px;
+}
+
+.skills {
   background-color: var(--contrast-about-me-color);
   padding: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.skills--content {
+  width: 100%;
+  max-width: 750px;
+  overflow-x: hidden;
+  box-shadow: 0 0 10px #000;
+  background-color: #213;
+  border-radius: 20px;
+  padding: 40px 0;
 }
 
 .skills--h2 {
@@ -432,38 +453,39 @@ body {
 .skills--elements {
   position: relative;
   padding: 60px 0;
-  width: 80%;
   margin: 0 auto;
+  display: flex;
+  overflow-x: hidden;
+  width: 1600px;
 }
 
 .skills--ul {
+  position: relative;
+  padding-block: 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  column-gap: 20px;
+  justify-content: space-around;
 }
 
 .skills--li {
+  list-style-type: none;
   display: flex;
-  justify-content: center;
-  list-style: none;
-  flex: 1 1 50px;
-  position: relative;
-  height: 100%;
+  animation: carouselSkills 5s linear infinite;
+}
+
+@keyframes carouselSkills {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-790px);
+  }
 }
 
 .skills--li img {
   height: 150px;
   padding: 20px;
-  background-color: var(--contrast-color-black);
   border-radius: 30px;
-  transition:
-    background 0.4s ease,
-    scale 0.4s ease;
-}
-
-.skills--li img:hover {
-  background: var(--contrast-color);
-  scale: 0.9;
 }
 
 /*TODO Skills Styles Ending*/
