@@ -440,7 +440,7 @@ body {
   box-shadow: 0 0 10px #000;
   background-color: #213;
   border-radius: 20px;
-  padding: 40px 0;
+  padding-top: 40px;
 }
 
 .skills--h2 {
@@ -511,3 +511,4 @@ body {
 }
 
 /*TODO Education Styles Ending*/
+
