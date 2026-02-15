@@ -222,6 +222,8 @@
         <form id="contact--form">
           <h3>Enviame un correo</h3>
           <div class="contact--form-element">
+            
+            <!--? Input Name-->
             <label class="contact--name" for="name">Nombre</label>
             <input
               type="text"
@@ -231,7 +233,10 @@
               required
             />
           </div>
+
           <div class="contact--form-element">
+
+          <!--? Input Email-->
             <label class="contact--email" for="email">Correo Electrónico</label>
             <input
               type="text"
@@ -242,6 +247,8 @@
             />
           </div>
           <div class="contact--form-element">
+
+          <!--? Input Subject-->
             <label class="contact--subject" for="subject">Asunto</label>
             <input
               type="text"
@@ -251,6 +258,8 @@
               required
             />
           </div>
+
+          <!--? Input TextArea-->
           <label for="message">Mensaje</label>
           <textarea
             name="message"
@@ -262,5 +271,13 @@
         </form>
       </div>
     </section>
+
+    <dialog id="success--dialog" class="dialog">
+      <h3>Gracias por tu mensaje</h3>
+      <p>En breves te respondo</p>
+      <button id="close--dialog">
+        <img src="/assets/favicons/xmark-solid-full.svg" alt="">
+      </button>
+    </dialog>
   </body>
 </html>
