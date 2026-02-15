@@ -1,9 +1,15 @@
-const img = document.getElementById("about-me--img");
-const h2 = document.getElementById("about-me--h2");
-const p = document.getElementById("about-me--p");
+emailjs.init({
+    publicKey: "vMwPi89JAbuopiypg",
+});
 
-const heightImg = img.clientHeight;
-const heightH2 = h2.clientHeight;
-const heightP = p.clientHeight
+document.getElementById("contact--form").addEventListener("submit", function(e){
+    e.preventDefault();
 
-2
+    emailjs.sendForm("service_8ngwdke", "template_pctsj4n", this)
+        .then(()=>{
+            console.log("SUCCESS!")
+        })
+        .catch((error)=>{
+            console.log("FAILED...", error);
+        });
+});
