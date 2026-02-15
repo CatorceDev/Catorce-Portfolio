@@ -672,3 +672,85 @@ body {
   box-shadow: 0 0 100px #fff;
   color: #fff;
 }
+
+#success--dialog{
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  height: 30dvh;
+  background-color: var(--complementary-color);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--title-font);
+  color: var(--contrast-color);
+  border: none;
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px;
+  border-radius: 40px;
+  justify-content: center;
+  box-shadow: 0 0 5px #fff;
+  display: none;
+}
+
+#success--dialog h3{
+}
+
+#success--dialog button{
+  width: 40px;
+  padding: 5px;
+  background-color: transparent;
+  border-style: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #324;
+}
+
+#success--dialog button:hover{
+  background-color: #324;
+}
+
+.footer{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  color: #fff;
+  background-color: var(--complementary-color);
+  gap: 20px;
+  box-shadow: 0 0 10px #fff5;
+}
+
+.footer--links{
+  display: flex;
+}
+
+.footer--links img{
+  display: flex;
+  width: 70px;
+  background-color: #aaa;
+  border-radius: 10px;
+  filter: grayscale(1);
+  transition: all 0.2s ease;
+}
+
+.footer--a{
+  margin: 30px;
+}
+
+.footer--github:hover{
+  filter: brightness(3) grayscale(0);
+  background-color: #fff;
+}
+
+.footer--linkedin:hover{
+  filter: grayscale(0);
+  background-color: #fff;
+}
+
