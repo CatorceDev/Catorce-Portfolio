@@ -87,7 +87,7 @@ body {
 /*TODO End nav styles*/
 .header {
   width: 100%;
-  height: 100lvh;
+  min-height: 100lvh;
   display: flex;
   justify-content: right;
   position: relative;
@@ -181,7 +181,7 @@ body {
     var(--contrast-about-me-color),
     var(--complementary-color) 70%
   );
-  height: 300lvh;
+  min-height: 300lvh;
   padding-top: 50%;
 }
 
@@ -497,7 +497,7 @@ body {
 /*TODO Education Styles*/
 
 #education {
-  height: 100lvh;
+  min-height: 100lvh;
   background-image: url("/assets/images/UNAM.jpg");
   background-size: cover;
   background-position: bottom;
