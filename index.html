@@ -191,17 +191,73 @@
     </section>
 
     <section id="education">
-
       <div class="education--container">
         <div class="education--element education--text">
           <h2>Formación Académica</h2>
-          <p>Actualmente estudio Ingeniería en Computación en la Facultad de Estudios Superiores Aragón de la Universidad Nacional Autónoma de México (UNAM), y curso el sexto semestre. Mi formación abarca tanto el hardware como el software, lo que me ha dado una visión general de los sistemas computacionales. Sin embargo, disfruto en desarrollo de software, donde disfruto crear soluciones y transformar ideas en código funcional</p>
+          <p>
+            Actualmente estudio Ingeniería en Computación en la Facultad de
+            Estudios Superiores Aragón de la Universidad Nacional Autónoma de
+            México (UNAM), y curso el sexto semestre. Mi formación abarca tanto
+            el hardware como el software, lo que me ha dado una visión general
+            de los sistemas computacionales. Sin embargo, disfruto en desarrollo
+            de software, donde disfruto crear soluciones y transformar ideas en
+            código funcional
+          </p>
         </div>
         <div class="education--element education--img">
-          <img src="/assets/images/logos-unam-fes-aragon.svg" alt="Imagen del logo de la FES Aragon">
+          <img
+            src="/assets/images/logos-unam-fes-aragon.svg"
+            alt="Imagen del logo de la FES Aragon"
+          />
         </div>
       </div>
+    </section>
 
+    <section id="contact">
+      <div class="contact--container">
+        <h2>Contáctame</h2>
+        <form id="contact--form">
+          <h3>Enviame un correo</h3>
+          <div class="contact--form-element">
+            <label class="contact--name" for="name">Nombre</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="contact--form-element">
+            <label class="contact--email" for="email">Correo Electrónico</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="tucorreo@email.com"
+              required
+            />
+          </div>
+          <div class="contact--form-element">
+            <label class="contact--subject" for="subject">Asunto</label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Asunto"
+              required
+            />
+          </div>
+          <label for="message">Mensaje</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Escribe tu mensaje"
+            required
+          ></textarea>
+          <button id="send">Enviar</button>
+        </form>
+      </div>
     </section>
   </body>
 </html>

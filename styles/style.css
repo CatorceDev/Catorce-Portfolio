@@ -565,3 +565,110 @@ body {
 }
 
 /*TODO Education Styles Ending*/
+/*TODO Contact Styles Ending*/
+
+#contact{
+  padding: 100px 20px;
+  background-color: var(--contrast-about-me-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact--container{
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  box-shadow: 0 0 5px #000;
+  background-color: #213;
+  border-radius: 30px;
+}
+
+.contact--container h2{
+  letter-spacing: 4px;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+}
+
+.contact--container h3{
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.contact--container h2,
+.contact--container h3{
+  text-align: center;
+  font-family: var(--title-font);
+  color: #fff;
+}
+
+#contact--form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact--form-element{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--contrast-about-me-color);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#contact--form label{
+  
+  font-family: var(--title-font);
+  color: #fff;
+}
+
+#contact--form input{
+  padding: 5px;
+  background-color: transparent;
+  border-style: none;
+  border: 1px solid #fff3;
+  border-radius: 5px;
+  color: #fff;
+  font-family: var(--title-font);
+  font-weight: 300;
+  width: 200px;
+}
+
+#message{
+  width: 100%;
+  height: 100px;
+  background-color: var(--contrast-about-me-color);
+  border-radius: 5px;
+  padding: 5px;
+  border-style: none;
+  resize: vertical;
+  color: #fff;
+}
+
+#send{
+  width: 100px;
+  padding: 5px;
+  background-color: var(--contrast-about-me-color);
+  border-style: none;
+  box-shadow: 0 0 2px #fff;
+  border-radius: 10px;
+  margin: auto;
+  transition: all 0.2s ease;
+  color: #fff7;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#send:hover{
+  background-color: #213;
+  box-shadow: 0 0 5px #fff;
+  color: #fffb;
+}
+
+#send:active{
+  background-color: #102;
+  box-shadow: 0 0 100px #fff;
+  color: #fff;
+}
