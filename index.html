@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="theme-color"
+      content="#0066FF"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0066FF"
+      media="(prefers-color-scheme: dark)"
+    />
     <title>Portfolio</title>
 
     <!--TODO Stylesheets-->
@@ -15,7 +25,10 @@
     <script src="/js/script.js" defer></script>
 
     <!--TODO API-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
 
   <body>
@@ -222,7 +235,6 @@
         <form id="contact--form">
           <h3>Enviame un correo</h3>
           <div class="contact--form-element">
-            
             <!--? Input Name-->
             <label class="contact--name" for="name">Nombre</label>
             <input
@@ -235,8 +247,7 @@
           </div>
 
           <div class="contact--form-element">
-
-          <!--? Input Email-->
+            <!--? Input Email-->
             <label class="contact--email" for="email">Correo Electrónico</label>
             <input
               type="text"
@@ -247,8 +258,7 @@
             />
           </div>
           <div class="contact--form-element">
-
-          <!--? Input Subject-->
+            <!--? Input Subject-->
             <label class="contact--subject" for="subject">Asunto</label>
             <input
               type="text"
@@ -276,7 +286,7 @@
       <h3>Gracias por tu mensaje</h3>
       <p>En breves te respondo</p>
       <button id="close--dialog" type="button">
-        <img src="/assets/favicons/xmark-solid-full.svg" alt="">
+        <img src="/assets/favicons/xmark-solid-full.svg" alt="" />
       </button>
     </dialog>
 
@@ -284,14 +294,29 @@
       <span>© 2026 Luis Carrillo — Frontend Developer</span>
       <span>Built with semantic HTML, modern CSS and vanilla JS</span>
       <div class="footer--links">
-        <a target="_blank" class="footer--a" href="https://github.com/CatorceDev">
-          <img class="footer--github" src="/assets/images/github.svg" alt="Mi Github">
+        <a
+          target="_blank"
+          class="footer--a"
+          href="https://github.com/CatorceDev"
+        >
+          <img
+            class="footer--github"
+            src="/assets/images/github.svg"
+            alt="Mi Github"
+          />
         </a>
-        <a target="_blank" class="footer--a" href="https://www.linkedin.com/in/luis-carrillo-648003371/" >
-          <img class="footer--linkedin" src="/assets/images/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp" alt="">
+        <a
+          target="_blank"
+          class="footer--a"
+          href="https://www.linkedin.com/in/luis-carrillo-648003371/"
+        >
+          <img
+            class="footer--linkedin"
+            src="/assets/images/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp"
+            alt=""
+          />
         </a>
       </div>
     </footer>
-
   </body>
 </html>
